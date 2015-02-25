@@ -1,12 +1,11 @@
-def while_loop (bar, reps)
+def for_loop (bar)
   i = 0
   numbers = []
 
-  while i < bar
+  bar.each do |i|
     puts "At the top i is #{i}"
     numbers.push(i)
 
-    i += reps
     puts "Numbers now: ", numbers
     puts "At the bottom i is #{i}"
   end
@@ -18,4 +17,4 @@ def while_loop (bar, reps)
   numbers.each {|num| puts num }
 end
 
-while_loop(30, 4)
+for_loop(0..9)
